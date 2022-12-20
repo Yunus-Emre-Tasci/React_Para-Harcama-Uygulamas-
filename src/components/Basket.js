@@ -6,14 +6,24 @@ const Basket = ({
         basket,total
     }) => {
   return (
-    <>
-    {basket.map((item,i)=> <BasketItem key={i} item={item} />)}
-    <div>
+    <div className='basket-container container'>
+        <h3>Alışveriş Detayları</h3>
+    <ul>
+        {
+            basket.map((item, i) => < BasketItem key = {
+                        i
+                    }
+                    item = {
+                        item
+                    }
+                    />)}
+    </ul>
+    <div className='total'>
     Toplam: ${
         moneyFormat(total)
     }
 </div>
-    </>
+    </div>
   )
 }
 

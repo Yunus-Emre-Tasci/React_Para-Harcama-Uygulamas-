@@ -34,3 +34,54 @@ code {
   justify-content: space-between;
   padding: 20px 0;
 }
+.actions button{
+  height: 40px;
+  padding: 0 15px;
+  flex:1;
+  cursor: pointer;
+}
+.actions button[disabled]{
+  opacity: .3;
+  cursor:not-allowed;
+}
+.actions .buy-btn{
+  background-color: #61dafb;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 0 4px 4px 0;
+}
+.actions .sell-btn{
+  background-color: #ccc;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px 0 0 4px;
+}
+.actions .amount{
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ddd;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #555;
+}
+.basket-container{
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.basket-container h3{
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.basket-container .total{
+  border-top: 1px solid #ddd;
+  padding: 10px 0 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: right;
+}

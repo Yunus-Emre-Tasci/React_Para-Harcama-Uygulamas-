@@ -1,5 +1,5 @@
-import React from 'react'
-
+import React from 'react';
+import moneyFormat from "../Helpers"
 
 
 const Product = ({
@@ -40,13 +40,13 @@ const removeBasket=()=> {
     <div className="product">
         <img src={product.image} alt="" />
         <h6> {product.title} </h6>
-        <div className="price"> ${product.price} </div>
+        <div className="price"> ${moneyFormat(product.price)} </div>
         <div className="actions">
-            <button disabled={!basketItem} onClick={removeBasket}>SAT</button>
+            <button className='sell-btn' disabled={!basketItem} onClick={removeBasket}>SAT</button>
             < span className = "amount" > {
                 basketItem && basketItem.amount || 0
             } </span>
-            <button disabled={
+            <button className='buy-btn' disabled={
              total+product.price>money
             } onClick={addBasket} >SATIN AL</button>
         </div>
@@ -61,6 +61,19 @@ const removeBasket=()=> {
           }
           .product img{
             width:100%;
+          }
+          .product h6{
+            font-size:20px;
+            margin-bottom:10px;
+          }
+          .product .price{
+            font-size:20px;
+            color:#179b17
+          }
+          .products .actions{
+            display:flex;
+            align-items:center;
+            margin-top:15px;
           }
           `}
         </style>

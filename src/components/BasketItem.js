@@ -7,9 +7,9 @@ const BasketItem = ({
 
     const product=products.find(i=>i.id===item.id)   
   return (
-    <div>
+    <li>
         {product.title} x {item.amount}
-    </div>
+    </li>
   )
 }
 

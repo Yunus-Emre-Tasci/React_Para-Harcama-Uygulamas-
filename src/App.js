@@ -29,9 +29,29 @@ useEffect(()=>{
         money
       }
       />
-      {
-        products.map((product,i)=> <Product basket={basket} setBasket={setBasket} key={i} product={product} total={total} money={money} />)
-      }
+      <div className="container products">
+        {
+          products.map((product, i) => < Product basket = {
+              basket
+            }
+            setBasket = {
+              setBasket
+            }
+            key = {
+              i
+            }
+            product = {
+              product
+            }
+            total = {
+              total
+            }
+            money = {
+              money
+            }
+            />)
+          }
+      </div>
       {total>0 && (
         <>
         <Basket basket={basket} total={total} />

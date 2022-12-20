@@ -38,6 +38,7 @@ const removeBasket=()=> {
 
   return (
     <div className="product">
+        <img src={product.image} alt="" />
         <h6> {product.title} </h6>
         <div className="price"> ${product.price} </div>
         <div className="actions">
@@ -52,10 +53,14 @@ const removeBasket=()=> {
         <style jsx>
           {`
           .product{
-            padding:10px;
+            padding:15px;
             background:#fff;
             border:1px solid #ddd;
-            margin-bottom:20px
+            margin-bottom:20px;
+            width:24%;
+          }
+          .product img{
+            width:100%;
           }
           `}
         </style>

@@ -5,29 +5,53 @@ const Header = ({
         money, total
     }) => {
   return (
-    <div>
+    <>
          {total>0&& money-total!==0&&
-         <>
-          Harcamak için ${
+         <div div className = 'header' >
+          Harcamak için <span>${
               moneyFormat(money - total)
-          } paranız
+          }</span> paranız
           kaldı!
-         </>
+         </div>
          }
          {total===0&& 
-         <>
-         Harcamak için ${
+         <div div className = 'header' >
+         Harcamak için  <span>${
              moneyFormat(money)
-         } paranız
+         }</span>  paranız
          var!
-         </>
+         </div>
          }
          {
             money-total===0&&
-            <div>
+            <div div className = 'header' >
             Paran bitti, lütfen biraz tasarruf yap!
             </div>
          }
+
+         <style jsx>{
+            `
+            .header{
+                position:sticky;
+                top:0;
+                background:linear-gradient(to bottom,green,greenyellow);
+                height:60px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                color:white;
+                font-size:24px;
+                letter-spacing:1px
+            }
+            .header span{
+                margin:0 10px;
+                font-weight:bold;
+
+            }
+            `
+         }
+
+         </style>
 
         {/* {
             total>0?(
@@ -44,7 +68,7 @@ const Header = ({
                 </div>
             )
         } */}
-    </div>
+    </>
   )
 }
 

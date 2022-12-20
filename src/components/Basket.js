@@ -1,5 +1,6 @@
 import React from 'react'
-import BasketItem from './BasketItem'
+import BasketItem from './BasketItem';
+import moneyFormat from "../Helpers"
 
 const Basket = ({
         basket,total
@@ -9,7 +10,7 @@ const Basket = ({
     {basket.map((item,i)=> <BasketItem key={i} item={item} />)}
     <div>
     Toplam: ${
-        total
+        moneyFormat(total)
     }
 </div>
     </>

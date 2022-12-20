@@ -7,7 +7,7 @@ import Basket from "./components/Basket";
 
 
 const App=()=>{
-const [money, setMoney] = useState(100)
+const [money, setMoney] = useState(128000000)
 const [basket, setBasket] = useState([])
 const [total, setTotal] = useState(0)
 

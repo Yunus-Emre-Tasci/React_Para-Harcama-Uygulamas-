@@ -1,4 +1,5 @@
 import React from 'react';
+import moneyFormat from "../Helpers"
 
 const Header = ({
         money, total
@@ -8,18 +9,16 @@ const Header = ({
          {total>0&& money-total!==0&&
          <>
           Harcamak için ${
-              money-total
-          }
-          paranız
+              moneyFormat(money - total)
+          } paranız
           kaldı!
          </>
          }
          {total===0&& 
          <>
          Harcamak için ${
-             money
-         }
-         paranız
+             moneyFormat(money)
+         } paranız
          var!
          </>
          }

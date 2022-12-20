@@ -54,8 +54,17 @@ useEffect(()=>{
       </div>
       {total>0 && (
         <>
-        <Basket basket={basket} total={total} />
-<button onClick={resetBasket} >Sepeti Sıfırla</button>
+        < Basket resetBasket = {
+          resetBasket
+        }
+        basket = {
+          basket
+        }
+        total = {
+          total
+        }
+        />
+{/* <button className="basket-reset-btn" onClick={resetBasket} >Sepeti Sıfırla</button> */}
  </>
       )
       }

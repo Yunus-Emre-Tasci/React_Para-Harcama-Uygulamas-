@@ -3,7 +3,7 @@ import BasketItem from './BasketItem';
 import moneyFormat from "../Helpers"
 
 const Basket = ({
-        basket,total
+        basket,total,resetBasket
     }) => {
   return (
     <div className='basket-container container'>
@@ -23,6 +23,7 @@ const Basket = ({
         moneyFormat(total)
     }
 </div>
+<button className="basket-reset-btn" onClick={resetBasket} >Sepeti Sıfırla</button>
     </div>
   )
 }

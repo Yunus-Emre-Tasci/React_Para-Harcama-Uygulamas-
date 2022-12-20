@@ -1,10 +1,18 @@
 import React from 'react'
+import BasketItem from './BasketItem'
 
 const Basket = ({
-        basket
+        basket,total
     }) => {
   return (
-    <div>Basket</div>
+    <>
+    {basket.map((item,i)=> <BasketItem key={i} item={item} />)}
+    <div>
+    Toplam: ${
+        total
+    }
+</div>
+    </>
   )
 }
 

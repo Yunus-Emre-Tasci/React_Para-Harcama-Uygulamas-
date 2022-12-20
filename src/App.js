@@ -32,8 +32,13 @@ useEffect(()=>{
       {
         products.map((product,i)=> <Product basket={basket} setBasket={setBasket} key={i} product={product} total={total} money={money} />)
       }
-      <Basket basket={basket} />
-      <button onClick={resetBasket} >Sepeti Sıfırla</button>
+      {total>0 && (
+        <>
+        <Basket basket={basket} total={total} />
+<button onClick={resetBasket} >Sepeti Sıfırla</button>
+ </>
+      )
+      }
     </div>
   )
 }

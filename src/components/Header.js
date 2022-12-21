@@ -1,11 +1,12 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import moneyFormat from "../Helpers"
 
 const Header = ({
         money, total
     }) => {
   return (
-    <>
+    <Container>
          {total>0&& money-total!==0&&
          <div div className = 'header' >
           Harcamak için <span>${
@@ -46,7 +47,6 @@ const Header = ({
             .header span{
                 margin:0 10px;
                 font-weight:bold;
-
             }
             `
          }
@@ -68,7 +68,7 @@ const Header = ({
                 </div>
             )
         } */}
-    </>
+    </Container>
   )
 }
 
